@@ -25,7 +25,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: github-pr-review
-        custom_rule_path: app/ktlint-ruleset.jar
+        custom_rule_path: app
         android: true
         fail_on_error: true
         level: warning

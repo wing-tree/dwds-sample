@@ -96,7 +96,7 @@ fun RollingText(number: Int) {
                     -120
                 } + fadeIn() with slideOutVertically {
                     120
-                }+ fadeOut()
+                } + fadeOut()
             } else { // 증가시.
                 slideInVertically {
                     120

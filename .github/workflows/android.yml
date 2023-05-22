@@ -1,0 +1,31 @@
+name: Run ktlint
+
+on:
+  pull_request:
+    branches: [ "master" ]
+  push:
+    branches: [ "master" ]
+
+jobs:
+  ktlint:
+    name: Run ktlint
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v2
+      
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+        
+    - name: Run ktlint
+      uses: ScaCap/action-ktlint@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        reporter: github-pr-review
+        custom_rule_path: app/ktlint-ruleset.jar
+        android: true
+        fail_on_error: true
+        level: warning

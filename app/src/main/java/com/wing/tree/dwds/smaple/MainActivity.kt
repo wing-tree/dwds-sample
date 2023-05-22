@@ -109,7 +109,7 @@ fun RollingText(number: Int) {
 
         Text(
             text = it.toString(),
-            modifier = Modifier.size(40.dp)
+            modifier = Modifier.size(40.dp),
         )
 
         prevNumber = it

@@ -24,7 +24,7 @@ jobs:
         sudo chown -R root:root $GITHUB_WORKSPACE
         
     - name: Run ktlint
-      uses: ScaCap/action-ktlint@master
+      uses: wing-tree/action-ktlint@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: github-pr-review

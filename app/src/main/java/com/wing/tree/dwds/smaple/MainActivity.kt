@@ -82,6 +82,7 @@ fun GreetingPreview() {
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun RollingText(number: Int) {
+
     var prevNumber by remember {
         mutableStateOf(number)
     }

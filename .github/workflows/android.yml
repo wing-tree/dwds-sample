@@ -17,13 +17,15 @@ jobs:
       
     - name: Checkout
       uses: actions/checkout@v3
+      with:
+        path: kr
         
     - name: Run ktlint
       uses: ScaCap/action-ktlint@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: github-pr-review
-        custom_rule_path: "ktlint-ruleset.jar"
+        custom_rule_path: "kr/ktlint-ruleset.jar"
         android: true
         fail_on_error: true
         level: warning

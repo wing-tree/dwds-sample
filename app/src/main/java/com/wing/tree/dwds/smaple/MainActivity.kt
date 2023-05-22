@@ -104,7 +104,7 @@ fun RollingText(number: Int) {
                     -120
                 } + fadeOut()
             }
-        }
+        },
     ) {
         Text(
             text = it.toString(),

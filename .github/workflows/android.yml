@@ -13,17 +13,14 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
-      
-    - run: |
-        sudo chown -R root:root $GITHUB_WORKSPACE
+      uses: actions/checkout@v3
         
     - name: Run ktlint
       uses: wing-tree/action-ktlint@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: github-pr-review
-        custom_rule_path: "ktlint-ruleset-standard-0.49.1"
+        custom_rule_path: "dwds-sample/ktlint-ruleset-standard-0.49.1"
         android: true
         fail_on_error: true
         level: warning

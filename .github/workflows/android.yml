@@ -20,9 +20,6 @@ jobs:
       with:
         path: kr
         
-    - run: |
-        sudo chown -R root:root $GITHUB_WORKSPACE
-        
     - name: Run ktlint
       uses: wing-tree/action-ktlint@master
       with:

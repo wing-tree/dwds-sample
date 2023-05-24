@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
                 ) {
 
                     println("qqqqq")
-                    println("kingking")
+                    println("kingking22")
                     Text(text = "dev")
                 }
             }

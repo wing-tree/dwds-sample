@@ -15,13 +15,12 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             DwdsSampleTheme {
-
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    println("dorte")
+                    println("dorte2222sdfsf")
                 }
             }
         }

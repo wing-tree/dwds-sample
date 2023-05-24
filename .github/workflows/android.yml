@@ -17,6 +17,7 @@ jobs:
       
     - run: |
         sudo chown -R root:root $GITHUB_WORKSPACE
+        ls
         
     - name: Run ktlint
       uses: wing-tree/action-ktlint@master

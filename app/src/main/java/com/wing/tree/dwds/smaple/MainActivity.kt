@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    println("dorte2222sdfsf")
+                    println("dorte2222sdsfdsfdfsf")
                 }
             }
         }

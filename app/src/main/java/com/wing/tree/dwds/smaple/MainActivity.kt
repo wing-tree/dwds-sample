@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    println("dorte2222sdsfdsfdsdfdsfsdfdsfsdfsdfdsffsf")
+                    println("kingking")
                     Text(text = "dev")
                 }
             }

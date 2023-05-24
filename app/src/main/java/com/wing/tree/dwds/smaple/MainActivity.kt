@@ -21,6 +21,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     println("dorte2222sdsfdsfdsdfdsfsdfdsfsdfsdfdsffsf")
+                    println("qqqqq")
                 }
             }
         }

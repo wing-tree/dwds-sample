@@ -10,10 +10,6 @@ jobs:
   ktlint:
     name: Run ktlint
     runs-on: ubuntu-latest
-
-    steps:
-    - name: Setup Gradle
-      uses: gradle/gradle-build-action@v2
       
     - name: Checkout
       uses: actions/checkout@v3

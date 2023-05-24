@@ -10,9 +10,14 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.animation.with
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Button
+import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -26,92 +31,27 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.wing.tree.dwds.smaple.ui.theme.DwdsSampleTheme
 import kotlinx.coroutines.delay
+import java.net.URL
+import java.net.URLClassLoader
+import java.util.ServiceConfigurationError
+import java.util.ServiceLoader
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         setContent {
             DwdsSampleTheme {
+
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    var n by remember {
-                        mutableStateOf(0)
-                    }
-
-                    LaunchedEffect(Unit) {
-                        repeat(10) {
-                            delay(500L)
-                            n++
-                        }
-
-                        repeat(10) {
-                            delay(600L)
-                            n--
-                        }
-                    }
-
-                    RollingText(n)
+                    println("dorte")
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(
-    name: String,
-    modifier: Modifier = Modifier,
-) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    DwdsSampleTheme {
-        Greeting("Android")
-    }
-}
-
-@OptIn(ExperimentalAnimationApi::class)
-@Composable
-fun RollingText(number: Int) {
-
-    var prevNumber by remember {
-        mutableStateOf(number)
-    }
-
-    AnimatedContent(
-        targetState = number,
-        modifier = Modifier.size(40.dp),
-        transitionSpec = {
-            if (number < prevNumber) { // 감소시,
-                slideInVertically {
-                    -120
-                } + fadeIn() with slideOutVertically {
-                    120
-                } + fadeOut()
-            } else { // 증가시.
-                slideInVertically {
-                    120
-                } + fadeIn() with slideOutVertically {
-                    -120
-                } + fadeOut()
-            }
-        },
-    ) {
-
-        Text(
-            text = it.toString(),
-            modifier = Modifier.size(40.dp),
-        )
-
-        prevNumber = it
     }
 }

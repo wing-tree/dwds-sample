@@ -23,6 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
+                    println("sdfdsfsdf")
                     println("qqqqq")
                     println("kingking22")
                     Text(text = "dev")
